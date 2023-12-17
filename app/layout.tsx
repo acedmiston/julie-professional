@@ -1,10 +1,11 @@
-import Header from "@/components/header";
+import Header from "../components/header";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import ActiveSectionContextProvider from "@/context/active-section-context";
-import Footer from "@/components/footer";
-import ThemeSwitch from "@/components/theme-switch";
-import ThemeContextProvider from "@/context/theme-context";
+import ActiveSectionContextProvider from "../context/active-section-context";
+import Footer from "../components/footer";
+import ThemeSwitch from "../components/theme-switch";
+import ThemeContextProvider from "../context/theme-context";
+import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import {  HiPhone } from "react-icons/hi";
 import { BsArrowRight} from "react-icons/bs";
-import { useActiveSectionContext, useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext, useSectionInView } from "../lib/hooks";
 
 const Intro = () => {
   const { ref } = useSectionInView("Home", 0.5);

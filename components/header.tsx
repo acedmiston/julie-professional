@@ -2,10 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { links } from "@/lib/data";
+import { links } from "../lib/data";
 import Link from "next/link";
 import clsx from "clsx";
-import { useActiveSectionContext } from "@/lib/hooks";
+import { useActiveSectionContext } from "../lib/hooks";
 
 const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =

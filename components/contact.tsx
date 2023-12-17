@@ -2,9 +2,9 @@
 
 import React, { FormEvent, useRef } from "react";
 import SectionHeading from "./section-heading";
-import { useSectionInView } from "@/lib/hooks";
+import { useSectionInView } from "../lib/hooks";
 import { motion } from "framer-motion";
-import { sendEmail } from "@/actions/sendEmail";
+import { sendEmail } from "../actions/sendEmail";
 import SubmitBtn from "./submit-button";
 import toast from "react-hot-toast";
 
