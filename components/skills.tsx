@@ -1,0 +1,42 @@
+"use client";
+
+import React from "react";
+import SectionHeading from "./section-heading";
+import { skillsData } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
+import { motion } from "framer-motion";
+
+const Skills = () => {
+  const { ref } = useSectionInView("Insurance", 0.5);
+
+  const fadeInVariants = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+  };
+  return (
+    <section
+      ref={ref}
+      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      id="insurance"
+    >
+      <SectionHeading>Insurance Accepted</SectionHeading>
+      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+        {skillsData.map((skill, index) => (
+          <motion.li
+            variants={fadeInVariants}
+            transition={{ delay: index * 0.1 }}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="px-5 py-3 bg-white borderBlack rounded-xl dark:bg-white/10 dark:text-white/80 focus:scale-110 hover:scale-110 dark:hover:bg-gray-950 active:scale-105"
+            key={index}
+          >
+            {skill}
+          </motion.li>
+        ))}
+      </ul>
+    </section>
+  );
+};
+
+export default Skills;
